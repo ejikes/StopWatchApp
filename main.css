@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #a92a2a;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+body.dark-theme {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-theme .no-button {
+  background-color: #222;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+body.dark-theme .toggle {
+  background-color: #222;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  background-color: #a92a2a;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.about {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.reset-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.no-button {
+  border: none;
+  background-color: #a92a2a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.display-section {
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.display-timer {
+  font-size: 4rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.toggle-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.toggle-btn {
+  background-color: #ffd453;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 60px 50px;
+  border: none;
+  border-radius: 70px;
+  box-shadow: 15px 15px 1px rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.toggle-btn:hover {
+  background-color: hsl(45, 87%, 50%);
+  box-shadow: 15px 15px 1px rgba(0, 0, 0, 0.4);
+}
+
+.lap-btn:hover {
+  background-color: hsl(45, 87%, 50%);
+  box-shadow: 15px 15px 1px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.bottom {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "top"
+      "middle"
+      "bottom";
+  }
+
+  .stopwatch-container {
+    max-width: 100%;
+    min-height: 86vh;
+  }
+
+  .top {
+    grid-area: top;
+  }
+
+  .middle {
+    grid-area: middle;
+  }
+  .bottom {
+    grid-area: bottom;
+  }
+
+  .toggle-section {
+    display: grid;
+    gap: 25px;
+  }
+}
